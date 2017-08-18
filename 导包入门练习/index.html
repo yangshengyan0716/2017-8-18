@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="点击按钮" id="btnCount">
+</body>
+<script src="./require.js"></script>
+<script src="./cat.js"></script>
+<script>
+    require(["cart"],function(cart){
+        // 想要给cart的返回值,就要给回调函数一个形参;
+
+    var btnCount = document.getElementById("btnCount");
+    
+    btnCount.onclick=function() {
+        cart.getCount();
+    }
+        // console.log(cart);
+        // 推荐做法:依赖路径的时候,把所有有返回值的模块
+            // 放在前面,把所有无返回值放在模块的后面.
+
+    });
+
+
+</script>
+</html>

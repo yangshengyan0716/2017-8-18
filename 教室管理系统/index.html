@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <style>
+        .teacher-container{
+            width:600px;
+            height:150px;
+            padding:30px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="讲师管理" id="btnTeacher">
+    <p>
+        再牛的肖邦也弹不出哥的悲伤;
+        再牛的肖邦也弹不出哥的悲伤;
+        再牛的肖邦也弹不出哥的悲伤;
+        再牛的肖邦也弹不出哥的悲伤;
+        再牛的肖邦也弹不出哥的悲伤;
+        再牛的肖邦也弹不出哥的悲伤;
+        再牛的肖邦也弹不出哥的悲伤;
+        再牛的肖邦也弹不出哥的悲伤;
+    </p>
+</body>
+<script src="./require.js"></script>
+<script>
+    require(["teacherMain"],function(teacherMain){
+        var btnTeacher = document.getElementById("btnTeacher");
+        btnTeacher.onclick =function(){
+            // 点击之后加载讲师管理模块;
+            teacherMain();
+        }
+    });
+</script>
+<script src="./require.js" data-main=""></script>
+</html>
